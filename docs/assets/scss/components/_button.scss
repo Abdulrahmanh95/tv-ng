@@ -1,0 +1,27 @@
+.button {
+  padding: 2rem 5rem;
+  color: var(--color-white);
+  font-family: "Loew Next Arabic", Roboto, Arial, sans-serif;
+  font-size: var(--font-size-default);
+  font-weight: 800;
+  line-height: 1.81;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+
+  &--secondary {
+    background-image: linear-gradient(107deg, #e83866 -26%, #e83866 -17%, #e57a3c 84%, #e57a3c 112%);
+  }
+
+  &--fixed-bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}

@@ -1,0 +1,106 @@
+@import "../../../../../assets/scss/abstracts/mixins";
+
+:host {
+  .stats {
+    height: 9.2rem;
+    padding: 0 0 0 6rem;
+    display: flex;
+    justify-content: flex-end;
+    background-image: linear-gradient(80deg, var(--color-primary-1) 11%, var(--color-primary-2) 90%, #153064 100%);
+    color: var(--color-white);
+
+    @include respond(tab-land) {
+      padding: 0 0 0 3rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 6rem;
+      justify-content: center;
+    }
+
+    & > * {
+      display: flex;
+      align-items: center;
+
+      @include respond(tab-port) {
+        &:not(:last-child) {
+          .stats__info {
+            display: none;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-left: 5rem;
+
+        @include respond(tab-land) {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .voice {
+      border-color: #1dd950;
+    }
+
+    .video-cam {
+      border-color: #e21956;
+    }
+
+    .network {
+      border-color: var(--color-brownish-orange);
+    }
+
+    &__icon {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      width: 5.2rem;
+      height: 5.2rem;
+      margin-left: 2rem;
+      box-shadow: 0 .4rem .6rem 0 rgba(var(--color-black), .16);
+      background-color: var(--color-white);
+      border: solid 3px;
+      border-color: inherit;
+      border-radius: 50%;
+
+      @include respond(tab-land) {
+        margin-left: 1rem;
+      }
+
+      &--voice {
+        width: 2.28rem;
+        height: 3.13rem;
+      }
+
+      &--video-cam {
+        width: 2.4rem;
+        height: 1.44rem;
+      }
+
+      &--network {
+        width: 2.18rem;
+        height: 1.8rem;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      direction: ltr;
+
+      &--type {
+        display: inline-block;
+        font-size: var(--font-size-small-1);
+        font-weight: bold;
+      }
+
+      &--state {
+        font-size: var(--font-size-small-1);
+        color: var(--color-secondary-2);
+        font-weight: 500;
+      }
+    }
+  }
+}

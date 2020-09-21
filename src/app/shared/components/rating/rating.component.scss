@@ -1,0 +1,11 @@
+:host {
+  .rating {
+    display: flex;
+    direction: rtl;
+
+    &__icon-star {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+}

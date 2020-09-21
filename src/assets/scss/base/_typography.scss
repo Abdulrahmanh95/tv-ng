@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Black.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Bold.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/ExtraBold.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Heavy.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Light.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Medium.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Regular.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loew Next Arabic';
+  src: url('~assets/fonts/LoewNextArabic/Thin.woff2') format('woff2'),
+  url('~assets/fonts/LoewNextArabic/Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Loew Next Arabic', Roboto, Arial, sans-serif;
+  font-size: 1.3rem;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: white;
+  direction: rtl;
+}

@@ -1,0 +1,23 @@
+<div class="clinic-container">
+  <tv-clinic-header></tv-clinic-header>
+
+  <div class="main">
+    <nav class="nav">
+      <tv-clinic-nav></tv-clinic-nav>
+
+      <!-- Mobile view -->
+      <div class="expert-info">
+        <tv-expert-info></tv-expert-info>
+      </div>
+
+      <!-- Mic, camera & wifi -->
+      <tv-stats-section></tv-stats-section>
+    </nav>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <button class="button button--secondary button--fixed-bottom">حجز عيادة (20 دينار كويتي)</button>
+</div>

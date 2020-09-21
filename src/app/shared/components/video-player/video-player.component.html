@@ -1,0 +1,8 @@
+<div class="video-container">
+  <h3 class="video-container__heading" [innerHTML]="heading"></h3>
+  <plyr plyrTitle="Hind Al-Nahed Intro"
+        [plyrOptions]="options"
+        [plyrPlaysInline]="true"
+        [plyrSources]="videoSources"
+        (plyrInit)="player = $event"></plyr>
+</div>

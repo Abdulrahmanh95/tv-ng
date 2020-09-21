@@ -1,0 +1,27 @@
+<ng-template #statistic let-type="type" let-typeName="typeName" let-state="state">
+  <div [class]="type">
+    <div class="stats__icon">
+      <svg class="stats__icon--{{type}}">
+        <image [attr.href]="'assets/icons/' + type + '.svg'"></image>
+      </svg>
+    </div>
+    <div class="stats__info">
+      <span class="stats__info--type">{{typeName}}</span>
+      <span class="stats__info--state">{{state}}</span>
+    </div>
+  </div>
+</ng-template>
+
+<div class="stats">
+  <ng-container [ngTemplateOutlet]="statistic"
+                [ngTemplateOutletContext]="{type: 'voice', typeName: 'تجربة الصوت', state: 'جيد جداً'}">
+  </ng-container>
+
+  <ng-container [ngTemplateOutlet]="statistic"
+                [ngTemplateOutletContext]="{type: 'video-cam', typeName: 'تجربة الكاميرا', state: 'لم تقم باختبارها'}">
+  </ng-container>
+
+  <ng-container [ngTemplateOutlet]="statistic"
+                [ngTemplateOutletContext]="{type: 'network', typeName: 'سرعة الانترنت', state: '٣٦ Mbps'}">
+  </ng-container>
+</div>

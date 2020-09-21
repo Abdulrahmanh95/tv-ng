@@ -1,0 +1,115 @@
+@import "../../../../assets/scss/abstracts/mixins";
+
+:host {
+  ::ng-deep {
+    .video-container {
+      width: 100%;
+      position: relative;
+
+      &__heading {
+        font-size: 2.9rem;
+        font-weight: 500;
+        text-align: right;
+
+        position: absolute;
+        right: calc(3rem + calc(var(--plyr-control-spacing, 10px) * .7));
+        bottom: calc(var(--plyr-control-spacing, 10px) * 3.5 +
+        var(--plyr-control-spacing, 10px) +
+        2 * calc(var(--plyr-control-spacing, 10px) * .7) +
+        var(--plyr-control-icon-size, 18px));
+
+        width: 55%;
+        z-index: 2;
+
+        @include respond(tab-port) {
+          bottom: calc(calc(var(--plyr-control-spacing, 10px) / 2) +
+          calc(var(--plyr-control-spacing, 10px) * .7) * 2 +
+          calc(var(--plyr-control-spacing, 10px) * .7) * 2 + 1rem);
+          font-size: var(--font-size-big-2);
+        }
+      }
+
+      &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
+
+      plyr {
+        display: block;
+        width: inherit;
+        height: inherit;
+
+        > div {
+          border-radius: .5rem;
+          box-shadow: 0 .5rem 8.6rem 0 rgba(0, 0, 0, .05);
+
+          @include respond(tab-port) {
+            border-radius: 0;
+            box-shadow: none;
+          }
+        }
+
+        .plyr {
+          // Controls sides padding
+          &__controls {
+            padding-left: 3rem;
+            padding-right: 3rem;
+            background: transparent;
+          }
+
+          // Linear gradient
+          &__poster {
+            opacity: 1 !important;
+            background-image: var(--linear-gradient-player);
+            background-color: transparent;
+            z-index: 2;
+          }
+
+          &__video-wrapper {
+            float: none;
+            clear: both;
+            height: 0;
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+
+            video {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+
+          // Vertical volume
+          &__volume {
+            max-width: initial;
+            min-width: initial;
+            width: auto;
+
+            input[data-plyr="volume"] {
+              margin: 0;
+              position: absolute;
+              left: 50%;
+              top: -1rem;
+              transform: rotate(-90deg);
+              width: 7rem;
+              transform-origin: left;
+
+              opacity: 0;
+              z-index: -1;
+              transition: all .2s;
+            }
+          }
+
+          &__volume:hover > input[data-plyr="volume"] {
+            opacity: 1;
+            z-index: 1000;
+          }
+        }
+      }
+    }
+  }
+}

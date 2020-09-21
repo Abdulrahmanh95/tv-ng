@@ -1,0 +1,16 @@
+<div class="store">
+  <div class="products" [@fadeInRight]="true">
+    <div class="products__item" *ngFor="let product of products"
+         (click)="activeProduct = product">
+      <tv-product-card [product]="product"></tv-product-card>
+    </div>
+  </div>
+
+  <div class="active-product" [@fadeInLeft]="true">
+    <tv-video-player *ngIf="activeProduct.isVideo()"
+                     [heading]="activeProduct.heading"></tv-video-player>
+    <tv-product-viewer *ngIf="!activeProduct.isVideo()"
+                       [product]="activeProduct">
+    </tv-product-viewer>
+  </div>
+</div>

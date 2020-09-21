@@ -1,0 +1,38 @@
+<div class="product-card">
+  <div class="content">
+    <div *ngIf="product.isVideo()" class="thumbnail">
+      <img class="thumbnail__image" [src]="product.thumbnail" alt="Product thumbnail"/>
+      <svg class="thumbnail__video-icon">
+        <image href="assets/icons/video-cam-white.svg"></image>
+      </svg>
+    </div>
+
+    <div *ngIf="!product.isVideo()" class="document">
+      <div class="document__type">
+        <svg class="document__icon">
+          <image [attr.href]="'assets/icons/' + product.type + '.svg'"></image>
+        </svg>
+        <span class="document__type-name">{{product.type}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4 class="footer__video-heading"
+        [matTooltipDisabled]="product?.heading.length <= 40"
+        [matTooltip]="product.heading">{{product.heading | truncate:40}}</h4>
+
+    <div class="footer__stats">
+      <div class="item-price">
+        <span class="item-price__amount">{{product.price}}</span>
+        <span class="item-price__currency">{{product.currency}}</span>
+      </div>
+      <span class="footer__downloads">
+      <span class="footer__downloads--count">{{product.downloadCount}}</span>
+      <svg class="footer__downloads--icon">
+        <image href="assets/icons/downloads.svg"></image>
+      </svg>
+    </span>
+    </div>
+  </div>
+</div>

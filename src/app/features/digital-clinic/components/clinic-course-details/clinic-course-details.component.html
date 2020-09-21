@@ -1,0 +1,52 @@
+<div class="course" [@fadeInUp]="true">
+  <div class="side">
+    <div class="course__description">
+      <tv-text-scrollable-box>
+        <ng-container heading>
+          وصف الكورس
+        </ng-container>
+        <ng-container paragraph>
+          لوريم إيبسوم هو ببساطة نص شكلي بمعنى أن الغاية هي الشكل وليس المحتوى ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف.
+        </ng-container>
+      </tv-text-scrollable-box>
+    </div>
+
+    <div class="videos">
+      <div class="videos__item" *ngFor="let product of products"
+           (click)="activeProduct = product">
+        <tv-product-card [product]="product"></tv-product-card>
+      </div>
+    </div>
+
+    <div class="suggestions">
+      <div class="suggestions__box">
+        <h3 class="suggestions__box-heading">صناعة محتوي تسويقي فعال</h3>
+
+        <div class="suggestions__box-items">
+          <div class="suggestions__box-item" *ngFor="let product of course1Products"
+               (click)="activeProduct = product">
+            <tv-product-card [product]="product"></tv-product-card>
+          </div>
+        </div>
+      </div>
+      <div class="suggestions__box">
+        <h3 class="suggestions__box-heading">صناعة محتوي تسويقي فعال</h3>
+
+        <div class="suggestions__box-items">
+          <div class="suggestions__box-item" *ngFor="let product of course2Products"
+               (click)="activeProduct = product">
+            <tv-product-card [product]="product"></tv-product-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <tv-video-player *ngIf="activeProduct.isVideo()"
+                     [heading]="activeProduct.heading"></tv-video-player>
+    <tv-product-viewer *ngIf="!activeProduct.isVideo()"
+                       [product]="activeProduct">
+    </tv-product-viewer>
+  </div>
+</div>

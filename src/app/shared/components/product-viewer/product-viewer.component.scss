@@ -1,0 +1,129 @@
+@import "../../../../assets/scss/abstracts/mixins";
+
+:host {
+  .viewer {
+    height: 100%;
+    padding: 4rem 3.5rem;
+    position: relative;
+    background-color: var(--color-tertiary-1);
+    background-image: linear-gradient(321deg, #10306f 14%, rgba(29, 66, 139, 0) 40%);
+    border-radius: .5rem;
+
+    .buy {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 3.5rem;
+      top: 4rem;
+
+      &__text {
+        font-size: var(--font-size-default);
+        font-weight: bold;
+        color: var(--color-white);
+        margin-left: 1rem;
+      }
+
+      &__icon-box {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 5.9rem;
+        height: 5.1rem;
+      }
+
+      &__ellipse-shape {
+        width: inherit;
+        height: inherit;
+
+        @include center-abs();
+      }
+
+      &__cart-icon {
+        z-index: 2;
+        width: 3.2rem;
+        height: 2.7rem;
+
+        @include center-abs();
+      }
+    }
+
+    .downloads {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 3rem;
+      bottom: 3rem;
+
+      &__count {
+        color: var(--color-secondary-3);
+        font-size: var(--font-size-big-2);
+        line-height: 1.43;
+        margin-left: .5rem;
+      }
+
+      &__icon {
+        width: 2.7rem;
+        height: 2rem;
+      }
+    }
+
+    .info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 3rem;
+      bottom: 3rem;
+
+      @include respond(tab-port) {
+        width: 75%;
+      }
+
+      &__type {
+        display: flex;
+        align-items: baseline;
+      }
+
+      &__type-name {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--color-secondary-3);
+      }
+
+      &__icon {
+        width: 3.3rem;
+        height: 3.9rem;
+        margin-left: .75rem;
+      }
+
+      &__heading {
+        font-size: 2.9rem;
+        font-weight: 500;
+        line-height: 1.55;
+        margin-bottom: 1rem;
+
+        @include respond(tab-port) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &__price {
+        color: var(--color-secondary-3);
+
+        &--amount {
+          font-size: 2.4rem;
+          font-weight: bold;
+          line-height: 1.04;
+          margin-left: .75rem;
+        }
+
+        &--currency {
+          font-size: var(--font-size-default);
+          font-weight: bold;
+          line-height: 1.56;
+        }
+      }
+    }
+  }
+}

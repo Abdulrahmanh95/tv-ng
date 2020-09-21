@@ -1,0 +1,18 @@
+<nav class="clinic-nav">
+  <ul class="top-nav">
+    <li *ngFor="let item of items" class="top-nav__item">
+      <a *ngIf="item.route !== 'courses'" class="top-nav__link"
+         [routerLink]="[item.route]"
+         [routerLinkActive]="['top-nav__link--active']">{{item.label}}</a>
+      <a *ngIf="item.route === 'courses'" class="top-nav__link" matTooltip="عودة إلى صفحة الكورسات"
+         [matTooltipDisabled]="!isCourseDetailsPage()"
+         [routerLink]="[item.route]"
+         [routerLinkActive]="['top-nav__link--active']">
+        <svg class="top-nav__link-icon" [class.top-nav__link-icon--visible]="isCourseDetailsPage()">
+          <image href="assets/icons/arrow-right-white.svg"></image>
+        </svg>
+        {{item.label}}
+      </a>
+    </li>
+  </ul>
+</nav>

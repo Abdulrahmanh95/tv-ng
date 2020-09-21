@@ -1,0 +1,31 @@
+<header class="header" [class.header--opened]="waitListOpened">
+  <nav class="user-nav">
+    <svg class="user-nav__icon">
+      <image href="assets/icons/bell.svg"></image>
+    </svg>
+
+    <div class="user-nav__user">
+      <div class="user-nav__photo-shape">
+        <svg class="user-nav__user-photo">
+          <image href="assets/icons/profile.svg"></image>
+        </svg>
+      </div>
+      <span class="user-nav__welcome-user">مرحباً بك </span>
+      <span class="user-nav__user-name">مالك محمد</span>
+    </div>
+  </nav>
+
+  <div class="waiting-list" (click)="emitClick()">
+    <svg class="waiting-list__right-arrow">
+      <image href="assets/icons/arrow-right.svg"></image>
+    </svg>
+    <span class="waiting-list__waiting-count">١٤</span>
+    <span class="waiting-list__waiting-text">قائمة الانتظار</span>
+  </div>
+
+  <div class="nav-menu" (click)="toggleSideNav()">
+    <svg class="nav-menu__icon">
+      <image href="assets/icons/nav-menu.svg"></image>
+    </svg>
+  </div>
+</header>

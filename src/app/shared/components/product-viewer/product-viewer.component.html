@@ -1,0 +1,35 @@
+<div class="viewer">
+  <div class="buy">
+    <span class="buy__text">تحميل / شراء</span>
+    <div class="buy__icon-box">
+      <svg class="buy__ellipse-shape">
+        <image href="assets/icons/cart-ellipse.svg"></image>
+      </svg>
+      <svg class="buy__cart-icon">
+        <image href="assets/icons/cart.svg"></image>
+      </svg>
+    </div>
+  </div>
+
+  <div class="downloads">
+    <span class="downloads__count">{{product.downloadCount}}</span>
+    <svg class="downloads__icon">
+      <image href="assets/icons/downloads.svg"></image>
+    </svg>
+  </div>
+
+  <div class="info">
+    <div class="info__type">
+      <svg class="info__icon">
+        <image [attr.href]="'assets/icons/' + product.type + '.svg'"></image>
+      </svg>
+      <span class="info__type-name">{{product.type}}</span>
+    </div>
+
+    <h2 class="info__heading">{{product.heading}}</h2>
+    <div class="info__price">
+      <span class="info__price--amount">{{product.price}}</span>
+      <span class="info__price--currency">{{product.currency}}</span>
+    </div>
+  </div>
+</div>

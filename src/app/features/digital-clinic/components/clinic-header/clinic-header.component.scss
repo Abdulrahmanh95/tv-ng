@@ -1,0 +1,64 @@
+@import "../../../../../assets/scss/abstracts/mixins";
+
+:host {
+  .clinic-header {
+    height: 19rem;
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-primary-3);
+    opacity: .97;
+
+    @include respond(tab-land) {
+      height: 15rem;
+      padding: 0 3rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 4.5rem;
+      border-top-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .icon-box__home {
+        height: 2.2rem;
+        width: 1.9rem;
+        margin-left: 1.5rem;
+        overflow: visible;
+
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
+
+      .expert-info {
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
+
+      .mobile-nav {
+        display: none;
+
+        @include respond(tab-port) {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .left {
+      .tv-logo {
+        &__photo {
+          width: 24.7rem;
+          height: 7.37rem;
+        }
+      }
+    }
+  }
+}

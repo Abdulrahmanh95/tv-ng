@@ -1,0 +1,67 @@
+@import "../../../../../assets/scss/abstracts/mixins";
+
+:host {
+  .clinic-container {
+    width: 100%;
+
+    .main {
+      background-color: var(--color-main-bg);
+      padding-bottom: 8rem;
+
+      @include respond(tab-port) {
+        padding-bottom: 10rem;
+      }
+
+      .nav {
+        display: flex;
+
+        @include respond(tab-port) {
+          flex-direction: column-reverse;
+        }
+
+        ::ng-deep {
+          tv-stats-section {
+            flex: 1 0;
+            margin-right: auto;
+
+            @include respond(tab-port) {
+              margin-right: initial;
+            }
+          }
+        }
+
+        .expert-info {
+          display: none;
+
+          @include respond(tab-port) {
+            display: block;
+            padding: 2rem 4.5rem 0 4.5rem;
+          }
+        }
+      }
+
+      .content {
+        padding: 4rem 6rem;
+
+        @include respond(tab-land) {
+          padding: 2rem 3rem
+        }
+
+        @include respond(tab-port) {
+          padding: 0;
+        }
+      }
+    }
+
+    .button {
+      &--fixed-bottom {
+        display: none;
+
+        @include respond(tab-port) {
+          display: flex;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

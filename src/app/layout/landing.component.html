@@ -1,0 +1,83 @@
+<div class="main-layout" [class.main-layout--shifted]="waitListOpened">
+  <div class="main-container">
+    <tv-header (waitListClick$)="toggleListOpened()" (sideNavOpen$)="toggleSideNav()"></tv-header>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+
+      <div class="left-side-nav" [class.left-side-nav--opened]="sideNavOpened">
+        <ul class="nav-list">
+          <li class="nav-list__item nav-list__item--main">
+            <a class="nav-list__link" href="#">الرئيسية</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">نبذه عنا</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">الخبراء</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">سؤال وجواب</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">اختبارات كورونا</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">اتصل بنا</a>
+          </li>
+          <li class="nav-list__item nav-list__item--join">
+            <a class="nav-list__link" href="#">انضم كخبير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wait-list">
+    <div class="wait-list__top">
+      <h2 class="wait-list__heading">
+        <span class="waiting-list__count">١٤</span>
+        <span class="waiting-list__text">قائمة الانتظار</span>
+      </h2>
+
+      <ul class="wait-list__ul">
+        <ng-container *ngFor="let user of users">
+          <ng-container *ngTemplateOutlet="userInfoElement; context: {user: user}">
+          </ng-container>
+        </ng-container>
+      </ul>
+    </div>
+
+    <div class="wait-list__footer">
+      <div class="wait-list__rights">جميع الحقوق محفوظة</div>
+      <div class="wait-list__owner">تايم فيوير © ٢٠١٣ - ٢٠٢٠</div>
+      <div class="wait-list__social-accounts">
+        <svg class="wait-list__platform-icon">
+          <image href="assets/icons/instagram.svg"></image>
+        </svg>
+        <svg class="wait-list__platform-icon">
+          <image href="assets/icons/twitter.svg"></image>
+        </svg>
+        <svg class="wait-list__platform-icon">
+          <image href="assets/icons/facebook.svg"></image>
+        </svg>
+      </div>
+    </div>
+
+    <ng-template #userInfoElement let-user="user">
+      <li class="wait-list__item" [class.wait-list__item--active]="user.active">
+        <div class="wait-list__user-circle">
+          <svg class="wait-list__user-img">
+            <image *ngIf="!user.active" href="assets/icons/user-bluegray.svg"></image>
+            <image *ngIf="user.active" href="assets/icons/user-secondary.svg"></image>
+          </svg>
+        </div>
+        <div class="wait-list__user-info">
+          <span class="wait-list__since">{{user.since}}</span>
+          <span class="wait-list__user-name">{{user.name}}</span>
+        </div>
+      </li>
+    </ng-template>
+  </div>
+
+</div>

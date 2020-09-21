@@ -1,0 +1,121 @@
+:host {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      display: flex;
+      width: 100%;
+      height: 19.6rem;
+
+      & > * {
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .thumbnail {
+        display: flex;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+          background-image: linear-gradient(320deg, rgba(#193b7e, .9) 6%,
+            rgba(255, 255, 255, .21) 30%,
+            rgba(255, 255, 255, .18) 35%,
+            rgba(255, 255, 255, .15) 44%,
+            rgba(255, 255, 255, .09) 50%,
+            rgba(255, 255, 255, .04) 51.5%,
+            rgba(255, 255, 255, 0) 53%);
+          object-fit: cover;
+        }
+
+        &__image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &__video-icon {
+          width: 2rem;
+          height: 1.5rem;
+          z-index: 2;
+
+          position: absolute;
+          right: 1.5rem;
+          bottom: 1.5rem;
+        }
+      }
+
+      .document {
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-tertiary-1);
+        background-image: linear-gradient(321deg, #10306f 14%, rgba(29, 66, 139, 0) 40%);
+
+        &__type {
+          display: flex;
+          align-items: flex-end;
+          position: absolute;
+          right: 1.5rem;
+          bottom: 1.5rem;
+        }
+
+        &__icon {
+          width: 2.2rem;
+          height: 2.8rem;
+          margin-left: .5rem;
+        }
+
+        &__type-name {
+          font-size: var(--font-size-medium-2);
+          font-weight: bold;
+          color: var(--color-secondary-3);
+          text-transform: uppercase;
+          line-height: 1.05;
+        }
+      }
+    }
+
+    .footer {
+      margin-top: 1rem;
+
+      &__video-heading {
+        font-size: var(--font-size-small-2);
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        min-height: 5.5rem;
+      }
+
+      &__stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: var(--color-secondary-3);
+      }
+
+      &__downloads {
+        display: flex;
+        align-items: center;
+
+        &--count {
+          font-size: var(--font-size-small-1);
+          font-weight: normal;
+          margin-left: .5rem;
+        }
+
+        &--icon {
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+      }
+    }
+  }
+}

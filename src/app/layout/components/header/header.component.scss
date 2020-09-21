@@ -1,0 +1,144 @@
+@import "../../../../assets/scss/abstracts/mixins";
+
+:host {
+  .header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+    background-color: var(--color-white);
+    transition: padding .3s;
+
+    @include respond(tab-land) {
+      padding: 0 3rem;
+
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    @include respond(tab-port) {
+      padding: 0 4.5rem;
+    }
+
+    .user-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary-2);
+      }
+
+      &__welcome-user {
+        padding: 0 1rem 0 0;
+        font-size: var(--font-size-default);
+        font-weight: bold;
+        line-height: 1.81;
+      }
+
+      &__user-name {
+        font-size: var(--font-size-medium-2);
+        font-weight: 800;
+        line-height: 1.53;
+        margin-right: .3rem
+      }
+    }
+
+    .waiting-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--color-tertiary-1);
+      font-size: var(--font-size-big);
+      font-weight: 800;
+      cursor: pointer;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+
+      &__right-arrow {
+        height: 1.7rem;
+        width: 1.7rem;
+        margin-left: 2.4rem;
+        transform: rotate(0);
+        transition: transform .3s .4s ease-in-out, margin-left .3s;
+
+        @include respond(tab-port) {
+          display: none;
+        }
+      }
+
+      &__waiting-count {
+        margin-left: .75rem;
+      }
+
+      &__waiting-text,
+      &__waiting-count {
+        width: initial;
+        transform: scale(1);
+        transition: transform .3s, width .1s .3s;
+
+        @include respond(tab-port) {
+          transition: none;
+        }
+      }
+    }
+
+    .nav-menu {
+      display: none;
+
+      @include respond(tab-port) {
+        display: flex;
+        width: 4rem;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        &__icon {
+          width: 100%;
+          height: 100%;
+          line-height: 1
+        }
+      }
+    }
+
+    &--opened {
+      padding: 0 6rem 0 2rem;
+
+      .waiting-list {
+        &__right-arrow {
+          transform: rotate(-180deg);
+          margin-left: 0;
+        }
+
+        &__waiting-text,
+        &__waiting-count {
+          width: 0;
+          transform: scale(0);
+
+          @include respond(tab-port) {
+            width: initial;
+            transform: scale(1);
+            transition: transform .3s, width .1s .3s;
+          }
+        }
+      }
+
+      .nav-menu {
+        display: none;
+      }
+    }
+  }
+}

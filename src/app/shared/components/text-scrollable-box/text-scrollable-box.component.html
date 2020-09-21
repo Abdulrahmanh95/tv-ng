@@ -3,7 +3,7 @@
     <ng-content select="[heading]"></ng-content>
   </h2>
 
-  <div class="text-scrollable-box__container">
+  <div class="text-scrollable-box__container" [class.text-scrollable-box__container--no-scroll]="!scrollable">
     <p class="text-scrollable-box__text">
       <ng-content select="[paragraph]"></ng-content>
     </p>

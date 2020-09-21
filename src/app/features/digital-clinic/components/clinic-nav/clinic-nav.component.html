@@ -4,12 +4,12 @@
       <a *ngIf="item.route !== 'courses'" class="top-nav__link"
          [routerLink]="[item.route]"
          [routerLinkActive]="['top-nav__link--active']">{{item.label}}</a>
-      <a *ngIf="item.route === 'courses'" class="top-nav__link" matTooltip="عودة إلى صفحة الكورسات"
-         [matTooltipDisabled]="!isCourseDetailsPage()"
+      <a *ngIf="item.route === 'courses'" class="top-nav__link"
+         [attr.title]="isCourseDetailsPage() ? 'عودة إلى صفحة الكورسات' : null"
          [routerLink]="[item.route]"
          [routerLinkActive]="['top-nav__link--active']">
         <svg class="top-nav__link-icon" [class.top-nav__link-icon--visible]="isCourseDetailsPage()">
-          <image href="assets/icons/arrow-right-white.svg"></image>
+          <use xlink:href="assets/icons/sprite.svg#icon-arrow-right-white"></use>
         </svg>
         {{item.label}}
       </a>

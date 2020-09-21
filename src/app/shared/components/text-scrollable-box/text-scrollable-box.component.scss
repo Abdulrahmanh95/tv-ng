@@ -21,6 +21,12 @@
 
       @include scrollbar;
 
+      &--no-scroll {
+        max-height: initial;
+        overflow-y: hidden;
+        padding: 0;
+      }
+
       @include respond(tab-port) {
         max-height: initial;
         overflow-y: hidden;

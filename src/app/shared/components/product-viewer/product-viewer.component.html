@@ -3,10 +3,10 @@
     <span class="buy__text">تحميل / شراء</span>
     <div class="buy__icon-box">
       <svg class="buy__ellipse-shape">
-        <image href="assets/icons/cart-ellipse.svg"></image>
+        <use xlink:href="assets/icons/sprite.svg#icon-cart-ellipse"></use>
       </svg>
       <svg class="buy__cart-icon">
-        <image href="assets/icons/cart.svg"></image>
+        <use xlink:href="assets/icons/sprite.svg#icon-cart"></use>
       </svg>
     </div>
   </div>
@@ -14,14 +14,14 @@
   <div class="downloads">
     <span class="downloads__count">{{product.downloadCount}}</span>
     <svg class="downloads__icon">
-      <image href="assets/icons/downloads.svg"></image>
+      <use xlink:href="assets/icons/sprite.svg#icon-downloads"></use>
     </svg>
   </div>
 
   <div class="info">
     <div class="info__type">
-      <svg class="info__icon">
-        <image [attr.href]="'assets/icons/' + product.type + '.svg'"></image>
+      <svg class="info__icon info__icon--{{product.type}}">
+        <use [attr.xlink:href]="'assets/icons/sprite.svg#icon-' + product.type"></use>
       </svg>
       <span class="info__type-name">{{product.type}}</span>
     </div>

@@ -1,13 +1,13 @@
 <header class="header" [class.header--opened]="waitListOpened">
   <nav class="user-nav">
     <svg class="user-nav__icon">
-      <image href="assets/icons/bell.svg"></image>
+      <use xlink:href="assets/icons/sprite.svg#icon-bell"></use>
     </svg>
 
     <div class="user-nav__user">
       <div class="user-nav__photo-shape">
         <svg class="user-nav__user-photo">
-          <image href="assets/icons/profile.svg"></image>
+          <use xlink:href="assets/icons/sprite.svg#icon-profile"></use>
         </svg>
       </div>
       <span class="user-nav__welcome-user">مرحباً بك </span>
@@ -17,7 +17,7 @@
 
   <div class="waiting-list" (click)="emitClick()">
     <svg class="waiting-list__right-arrow">
-      <image href="assets/icons/arrow-right.svg"></image>
+      <use xlink:href="assets/icons/sprite.svg#icon-arrow-right"></use>
     </svg>
     <span class="waiting-list__waiting-count">١٤</span>
     <span class="waiting-list__waiting-text">قائمة الانتظار</span>
@@ -25,7 +25,7 @@
 
   <div class="nav-menu" (click)="toggleSideNav()">
     <svg class="nav-menu__icon">
-      <image href="assets/icons/nav-menu.svg"></image>
+      <use xlink:href="assets/icons/sprite.svg#icon-nav-menu"></use>
     </svg>
   </div>
 </header>

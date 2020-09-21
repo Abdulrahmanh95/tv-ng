@@ -34,6 +34,7 @@
       &__ellipse-shape {
         width: inherit;
         height: inherit;
+        fill: url(#ellipse-linear-gradient);
 
         @include center-abs();
       }
@@ -44,6 +45,7 @@
         height: 2.7rem;
 
         @include center-abs();
+        transform: translate(-54%, -50%);
       }
     }
 
@@ -64,6 +66,7 @@
       &__icon {
         width: 2.7rem;
         height: 2rem;
+        fill: url(#primary-linear-gradient);
       }
     }
 
@@ -95,6 +98,15 @@
         width: 3.3rem;
         height: 3.9rem;
         margin-left: .75rem;
+
+        &--audio {
+          fill: url(#audio-linear-gradient);
+        }
+
+        &--word,
+        &--pdf {
+          fill: url(#doc-linear-gradient);
+        }
       }
 
       &__heading {

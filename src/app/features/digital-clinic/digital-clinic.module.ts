@@ -8,12 +8,11 @@ import {StatsSectionComponent} from './components/stats-section/stats-section.co
 import {SharedModule} from '../../shared/shared.module';
 import {ClinicNavComponent} from './components/clinic-nav/clinic-nav.component';
 import {ExpertIntroComponent} from './components/expert-intro/expert-intro.component';
-import { ClinicStoreComponent } from './components/clinic-store/clinic-store.component';
-import { ClinicBroadcastComponent } from './components/clinic-broadcast/clinic-broadcast.component';
-import { ClinicCoursesComponent } from './components/clinic-courses/clinic-courses.component';
-import { ClinicBookingComponent } from './components/clinic-booking/clinic-booking.component';
-import { ClinicCourseDetailsComponent } from './components/clinic-course-details/clinic-course-details.component';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {ClinicStoreComponent} from './components/clinic-store/clinic-store.component';
+import {ClinicBroadcastComponent} from './components/clinic-broadcast/clinic-broadcast.component';
+import {ClinicCoursesComponent} from './components/clinic-courses/clinic-courses.component';
+import {ClinicBookingComponent} from './components/clinic-booking/clinic-booking.component';
+import {ClinicCourseDetailsComponent} from './components/clinic-course-details/clinic-course-details.component';
 
 @NgModule({
   declarations: [DigitalClinicComponent,
@@ -25,13 +24,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     ClinicBroadcastComponent,
     ClinicCoursesComponent,
     ClinicBookingComponent,
-    ClinicCourseDetailsComponent,],
-    imports: [
-        CommonModule,
-        DigitalClinicRoutingModule,
-        SharedModule,
-        MatTooltipModule,
-    ]
+    ClinicCourseDetailsComponent
+  ],
+  imports: [
+    CommonModule,
+    DigitalClinicRoutingModule,
+    SharedModule,
+  ]
 })
 export class DigitalClinicModule {
 }

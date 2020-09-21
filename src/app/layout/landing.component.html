@@ -52,15 +52,21 @@
       <div class="wait-list__rights">جميع الحقوق محفوظة</div>
       <div class="wait-list__owner">تايم فيوير © ٢٠١٣ - ٢٠٢٠</div>
       <div class="wait-list__social-accounts">
-        <svg class="wait-list__platform-icon">
-          <image href="assets/icons/instagram.svg"></image>
-        </svg>
-        <svg class="wait-list__platform-icon">
-          <image href="assets/icons/twitter.svg"></image>
-        </svg>
-        <svg class="wait-list__platform-icon">
-          <image href="assets/icons/facebook.svg"></image>
-        </svg>
+        <a href="#" class="wait-list__platform-link">
+          <svg class="wait-list__platform-icon">
+            <use xlink:href="assets/icons/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+        <a href="#" class="wait-list__platform-link">
+          <svg class="wait-list__platform-icon">
+            <use xlink:href="assets/icons/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" class="wait-list__platform-link">
+          <svg class="wait-list__platform-icon">
+            <use xlink:href="assets/icons/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -68,8 +74,7 @@
       <li class="wait-list__item" [class.wait-list__item--active]="user.active">
         <div class="wait-list__user-circle">
           <svg class="wait-list__user-img">
-            <image *ngIf="!user.active" href="assets/icons/user-bluegray.svg"></image>
-            <image *ngIf="user.active" href="assets/icons/user-secondary.svg"></image>
+            <use xlink:href="assets/icons/sprite.svg#icon-user-bluegray"></use>
           </svg>
         </div>
         <div class="wait-list__user-info">
@@ -80,4 +85,55 @@
     </ng-template>
   </div>
 
+  <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+    <linearGradient id="primary-linear-gradient" x1=".186" x2=".87" y1=".94" y2=".208" gradientUnits="objectBoundingBox">
+      <stop offset=".067" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="secondary-linear-gradient" x1=".196" x2=".848" y1=".111" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e83866"/>
+      <stop offset=".067" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+      <stop offset="1" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="doc-linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e83866"/>
+      <stop offset=".067" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+      <stop offset="1" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="audio-linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset=".067" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="ellipse-linear-gradient" x2=".889" y1="-.036" y2="1.042" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e83866"/>
+      <stop offset=".132" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+      <stop offset="1" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="camera-linear-gradient" x1="-.133" x2=".923" y1="-.151" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e83866"/>
+      <stop offset=".067" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+      <stop offset="1" stop-color="#e57a3c"/>
+    </linearGradient>
+
+    <linearGradient id="user-linear-gradient" x1=".253" x2="1.038" y1="-.08" y2="1.11" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d3dced"/>
+      <stop offset="1" stop-color="#acc0d0"/>
+    </linearGradient>
+
+    <linearGradient id="user-active-linear-gradient" x2="1.183" y1="-.183" y2="1.732" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e83866"/>
+      <stop offset=".117" stop-color="#e83866"/>
+      <stop offset=".801" stop-color="#e57a3c"/>
+      <stop offset="1" stop-color="#e57a3c"/>
+    </linearGradient>
+  </svg>
 </div>

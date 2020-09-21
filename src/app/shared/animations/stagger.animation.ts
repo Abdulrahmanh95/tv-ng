@@ -3,7 +3,7 @@ import { animateChild, query, stagger, transition, trigger } from '@angular/anim
 export function staggerAnimation(timing: number) {
   return trigger('stagger', [
     transition('* => *', [ // each time the binding value changes
-      query('@fadeInUp, @fadeInRight, @scaleIn', stagger(timing, animateChild()), { optional: true }),
+      query('@fadeInUp, @fadeInRight, @fadeIn, @scaleIn', stagger(timing, animateChild()), { optional: true }),
     ])
   ]);
 }

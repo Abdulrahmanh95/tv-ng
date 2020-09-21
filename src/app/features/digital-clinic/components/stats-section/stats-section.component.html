@@ -2,7 +2,7 @@
   <div [class]="type">
     <div class="stats__icon">
       <svg class="stats__icon--{{type}}">
-        <image [attr.href]="'assets/icons/' + type + '.svg'"></image>
+        <use [attr.xlink:href]="'assets/icons/sprite.svg#icon-' + type"></use>
       </svg>
     </div>
     <div class="stats__info">

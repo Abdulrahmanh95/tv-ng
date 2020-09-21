@@ -4,13 +4,12 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {RatingComponent} from './components/rating/rating.component';
 import {TextScrollableBoxComponent} from './components/text-scrollable-box/text-scrollable-box.component';
 import {PlyrModule} from 'ngx-plyr';
-import { VideoPlayerComponent } from './components/video-player/video-player.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
-import { ProductViewerComponent } from './components/product-viewer/product-viewer.component';
-import { CourseItemComponent } from './components/course-item/course-item.component';
+import {VideoPlayerComponent} from './components/video-player/video-player.component';
+import {ProductCardComponent} from './components/product-card/product-card.component';
+import {ProductViewerComponent} from './components/product-viewer/product-viewer.component';
+import {CourseItemComponent} from './components/course-item/course-item.component';
 import {TruncatePipe} from './pipes/truncate.pipe';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import { ExpertInfoComponent } from './components/expert-info/expert-info.component';
+import {ExpertInfoComponent} from './components/expert-info/expert-info.component';
 
 
 @NgModule({
@@ -27,7 +26,6 @@ import { ExpertInfoComponent } from './components/expert-info/expert-info.compon
   imports: [
     CommonModule,
     PlyrModule,
-    MatTooltipModule
   ],
   exports: [
     PageNotFoundComponent,

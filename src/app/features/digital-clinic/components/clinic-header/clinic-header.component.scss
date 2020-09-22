@@ -55,6 +55,7 @@
     .left {
       .tv-logo {
         &__photo {
+          display: flex;
           width: 24.7rem;
           height: 7.37rem;
         }

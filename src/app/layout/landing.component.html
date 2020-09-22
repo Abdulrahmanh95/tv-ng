@@ -53,19 +53,13 @@
       <div class="wait-list__owner">تايم فيوير © ٢٠١٣ - ٢٠٢٠</div>
       <div class="wait-list__social-accounts">
         <a href="#" class="wait-list__platform-link">
-          <svg class="wait-list__platform-icon">
-            <use xlink:href="assets/icons/sprite.svg#icon-instagram"></use>
-          </svg>
+          <tv-svg class="wait-list__platform-icon" icon="instagram"></tv-svg>
         </a>
         <a href="#" class="wait-list__platform-link">
-          <svg class="wait-list__platform-icon">
-            <use xlink:href="assets/icons/sprite.svg#icon-facebook"></use>
-          </svg>
+          <tv-svg class="wait-list__platform-icon" icon="facebook"></tv-svg>
         </a>
         <a href="#" class="wait-list__platform-link">
-          <svg class="wait-list__platform-icon">
-            <use xlink:href="assets/icons/sprite.svg#icon-twitter"></use>
-          </svg>
+          <tv-svg class="wait-list__platform-icon" icon="twitter"></tv-svg>
         </a>
       </div>
     </div>
@@ -73,9 +67,8 @@
     <ng-template #userInfoElement let-user="user">
       <li class="wait-list__item" [class.wait-list__item--active]="user.active">
         <div class="wait-list__user-circle">
-          <svg class="wait-list__user-img">
-            <use xlink:href="assets/icons/sprite.svg#icon-user-bluegray"></use>
-          </svg>
+          <tv-svg class="wait-list__user-img" icon="user-bluegray" [gradient]="user.active ? 'user-active' : 'user'">
+          </tv-svg>
         </div>
         <div class="wait-list__user-info">
           <span class="wait-list__since">{{user.since}}</span>

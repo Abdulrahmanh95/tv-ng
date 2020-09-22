@@ -10,6 +10,7 @@ import {ProductViewerComponent} from './components/product-viewer/product-viewer
 import {CourseItemComponent} from './components/course-item/course-item.component';
 import {TruncatePipe} from './pipes/truncate.pipe';
 import {ExpertInfoComponent} from './components/expert-info/expert-info.component';
+import {TvSvgComponent} from './components/tv-svg/tv-svg.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ExpertInfoComponent} from './components/expert-info/expert-info.componen
     ProductViewerComponent,
     CourseItemComponent,
     TruncatePipe,
-    ExpertInfoComponent
+    ExpertInfoComponent,
+    TvSvgComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import {ExpertInfoComponent} from './components/expert-info/expert-info.componen
     ProductViewerComponent,
     CourseItemComponent,
     TruncatePipe,
-    ExpertInfoComponent
+    ExpertInfoComponent,
+    TvSvgComponent
   ]
 })
 export class SharedModule {

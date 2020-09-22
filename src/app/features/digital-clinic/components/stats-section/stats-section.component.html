@@ -1,9 +1,7 @@
 <ng-template #statistic let-type="type" let-typeName="typeName" let-state="state">
   <div [class]="type">
     <div class="stats__icon">
-      <svg class="stats__icon--{{type}}">
-        <use [attr.xlink:href]="'assets/icons/sprite.svg#icon-' + type"></use>
-      </svg>
+      <tv-svg [class]="'stats__icon--' + type" [icon]="type"></tv-svg>
     </div>
     <div class="stats__info">
       <span class="stats__info--type">{{typeName}}</span>

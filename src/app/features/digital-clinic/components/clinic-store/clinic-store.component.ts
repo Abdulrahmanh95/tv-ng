@@ -91,4 +91,8 @@ export class ClinicStoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onProductSelect(product: ProductHeader): void {
+    this.activeProduct = product;
+  }
+
 }

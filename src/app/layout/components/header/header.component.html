@@ -1,14 +1,11 @@
 <header class="header" [class.header--opened]="waitListOpened">
   <nav class="user-nav">
-    <svg class="user-nav__icon">
-      <use xlink:href="assets/icons/sprite.svg#icon-bell"></use>
-    </svg>
+    <tv-svg class="user-nav__icon" icon="bell"></tv-svg>
 
     <div class="user-nav__user">
       <div class="user-nav__photo-shape">
-        <svg class="user-nav__user-photo">
-          <use xlink:href="assets/icons/sprite.svg#icon-profile"></use>
-        </svg>
+        <tv-svg icon="profile" gradient="primary" class="user-nav__user-photo">
+        </tv-svg>
       </div>
       <span class="user-nav__welcome-user">مرحباً بك </span>
       <span class="user-nav__user-name">مالك محمد</span>
@@ -16,16 +13,12 @@
   </nav>
 
   <div class="waiting-list" (click)="emitClick()">
-    <svg class="waiting-list__right-arrow">
-      <use xlink:href="assets/icons/sprite.svg#icon-arrow-right"></use>
-    </svg>
+    <tv-svg class="waiting-list__right-arrow" icon="arrow-right"></tv-svg>
     <span class="waiting-list__waiting-count">١٤</span>
     <span class="waiting-list__waiting-text">قائمة الانتظار</span>
   </div>
 
   <div class="nav-menu" (click)="toggleSideNav()">
-    <svg class="nav-menu__icon">
-      <use xlink:href="assets/icons/sprite.svg#icon-nav-menu"></use>
-    </svg>
+    <tv-svg class="nav-menu__icon" icon="nav-menu"></tv-svg>
   </div>
 </header>

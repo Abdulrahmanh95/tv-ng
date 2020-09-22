@@ -2,27 +2,22 @@
   <div class="buy">
     <span class="buy__text">تحميل / شراء</span>
     <div class="buy__icon-box">
-      <svg class="buy__ellipse-shape">
-        <use xlink:href="assets/icons/sprite.svg#icon-cart-ellipse"></use>
-      </svg>
-      <svg class="buy__cart-icon">
-        <use xlink:href="assets/icons/sprite.svg#icon-cart"></use>
-      </svg>
+      <tv-svg icon="cart-ellipse" class="buy__ellipse-shape" gradient="ellipse"></tv-svg>
+      <tv-svg icon="cart" class="buy__cart-icon"></tv-svg>
     </div>
   </div>
 
   <div class="downloads">
     <span class="downloads__count">{{product.downloadCount}}</span>
-    <svg class="downloads__icon">
-      <use xlink:href="assets/icons/sprite.svg#icon-downloads"></use>
-    </svg>
+    <tv-svg icon="downloads" class="downloads__icon" gradient="primary">
+    </tv-svg>
   </div>
 
   <div class="info">
     <div class="info__type">
-      <svg class="info__icon info__icon--{{product.type}}">
-        <use [attr.xlink:href]="'assets/icons/sprite.svg#icon-' + product.type"></use>
-      </svg>
+      <tv-svg class="info__icon"
+              [gradient]="product.type !== 'audio' ? 'doc' : 'audio'"
+              [icon]="product.type"></tv-svg>
       <span class="info__type-name">{{product.type}}</span>
     </div>
 

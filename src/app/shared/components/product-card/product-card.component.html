@@ -2,16 +2,14 @@
   <div class="content">
     <div *ngIf="product.isVideo()" class="thumbnail">
       <img class="thumbnail__image" [src]="product.thumbnail" alt="Product thumbnail"/>
-      <svg class="thumbnail__video-icon">
-        <use xlink:href="assets/icons/sprite.svg#icon-video-cam-white"></use>
-      </svg>
+      <tv-svg class="thumbnail__video-icon" icon="video-cam-white"></tv-svg>
     </div>
 
     <div *ngIf="!product.isVideo()" class="document">
       <div class="document__type">
-        <svg class="document__icon document__icon--{{product.type}}">
-          <use [attr.xlink:href]="'assets/icons/sprite.svg#icon-' + product.type"></use>
-        </svg>
+        <tv-svg class="document__icon document__icon--{{product.type}}"
+                [gradient]="product.type !== 'audio' ? 'doc' : 'audio'"
+                [icon]="product.type"></tv-svg>
         <span class="document__type-name">{{product.type}}</span>
       </div>
     </div>
@@ -28,9 +26,9 @@
       </div>
       <span class="footer__downloads">
       <span class="footer__downloads--count">{{product.downloadCount}}</span>
-      <svg class="footer__downloads--icon">
-        <use xlink:href="assets/icons/sprite.svg#icon-downloads"></use>
-      </svg>
+        <tv-svg class="footer__downloads--icon"
+                icon="downloads"
+                gradient="primary"></tv-svg>
     </span>
     </div>
   </div>

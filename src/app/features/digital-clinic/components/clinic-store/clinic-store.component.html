@@ -1,7 +1,7 @@
 <div class="store">
   <div class="products" [@fadeInRight]="true">
     <div class="products__item" *ngFor="let product of products"
-         (click)="activeProduct = product">
+         (click)="onProductSelect(product)">
       <tv-product-card [product]="product"></tv-product-card>
     </div>
   </div>

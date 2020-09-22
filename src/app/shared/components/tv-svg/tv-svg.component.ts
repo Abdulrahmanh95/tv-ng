@@ -27,28 +27,25 @@ export class TvSvgComponent implements OnInit {
    */
   public spriteUrl = 'assets/icons/sprite.svg';
 
-  /**
-   * Full object path
-   */
-  public svgStyle: {fill: string} = null;
-
   constructor() { }
 
   ngOnInit(): void {
-    this.setSvgStyle();
   }
 
   /**
    * Set either gradient url or fill color
    * @private
    */
-  private setSvgStyle(): void {
+  svgStyle(): {fill: string} {
+    let svgStyleObject: {fill: string} = null;
+
     if (this.gradient) {
       const gradientUrl = `${window.location.pathname}#${this.gradient}-linear-gradient`;
-      this.svgStyle = {fill: `url(${gradientUrl})`};
+      svgStyleObject = {fill: `url(${gradientUrl})`};
     } else if (this.fill) {
-      this.svgStyle = {fill: this.fill};
+      svgStyleObject = {fill: this.fill};
     }
+    return svgStyleObject;
   }
 
   get iconPrefixed(): string {

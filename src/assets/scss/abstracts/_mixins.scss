@@ -48,6 +48,7 @@
 900 - 1200px:   Tablet landscape
 [1200 - 1800]:  Normal styles
 1800px+:        Big desktop
+2560+:          Large desktop
 
 $breakpoint argument choices:
 - phone
@@ -68,5 +69,7 @@ ORDER: base + typography > general layout + grid > page layout > components
     @media only screen and (max-width: 75em) { @content }; // 1200px
   } @else if $breakpoint == big-desktop {
     @media only screen and (min-width: 112.5em) { @content }; // 1800px+
+  } @else if $breakpoint == large-desktop {
+    @media only screen and (min-width: 160em) { @content }; // 2560px+
   }
 }

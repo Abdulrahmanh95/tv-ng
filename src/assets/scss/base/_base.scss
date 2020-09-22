@@ -22,7 +22,11 @@ html {
   }
 
   @include respond(big-desktop) {
-    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+    font-size: 75%; // 1rem = 10px; 10px/16px = 62.5%
+  }
+
+  @include respond(large-desktop) {
+    font-size: 87.5%; // 1rem = 14px; 14px/16px = 87.5%
   }
 
   &.opened {
@@ -36,6 +40,7 @@ html {
 
 body {
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 svg {
